@@ -1,0 +1,16 @@
+html{
+
+    min-height: 100%;
+    position: relative;
+  
+  }
+  body{
+      margin: 0px;
+      padding: 0px;
+      background : rgba(0,0,0,0.7) url(resources/background-img.jpg);
+      background-size : cover;
+      background-blend-mode: darken;
+      min-height: 100%;
+      display: grid;
+      color: rgb(229, 240, 255);
+  }
