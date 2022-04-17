@@ -17,18 +17,18 @@
 
   </head>
   <body>
-    <div class="conatiner">
+    <div class="container main-cont">
         <div class="row">
-            <div class="col-md-6">
+            <div class="col">
                 <div class="content-section info-form ">
                     <form method="POST" action="" enctype="multipart/form-data">
                         {{ form.hidden_tag() }}
-                        <fieldset class="form-group">
-                            <legend class="border-bottom mb-4">House Price Prediction</legend>
-                            <div class="form-group">
+                        <fieldset class="form-group"style="padding-left:400px; padding-right: 400px;">
+                            <legend class="border-bottom mb-4 title-form"style="text-align: center; letter-spacing: 4px;">House Price Prediction</legend>
+                            <div class="form-group" style="margin-top :20px; padding:auto;">
                                 {{ form.area.label(class="form-control-label") }}
                                 {% if form.area.errors %}
-                                    {{ form.area(class="form-control form-control-lg is-invalid") }}
+                                    {{ form.area(class="form-control is-invalid") }}
                                     <div class="invalid-feedback">
                                         {% for error in form.area.errors %}
                                             <span>{{ error }}</span>
@@ -38,7 +38,7 @@
                                     {{ form.area(class="form-control form-control-lg") }}
                                 {% endif %}
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" style="margin-top :20px; padding:auto;">
                                 {{ form.bhk.label(class="form-control-label") }}
                                 {% if form.bhk.errors %}
                                     {{ form.bhk(class="form-control form-control-lg is-invalid") }}
@@ -51,7 +51,7 @@
                                     {{ form.bhk(class="form-control form-control-lg") }}
                                 {% endif %}
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" style="margin-top :20px; padding:auto;">
                                 {{ form.bath.label(class="form-control-label") }}
                                 {% if form.bath.errors %}
                                     {{ form.bath(class="form-control form-control-lg is-invalid") }}
@@ -64,7 +64,7 @@
                                     {{ form.bath(class="form-control form-control-lg") }}
                                 {% endif %}
                             </div>
-                            <div class="form-group">
+                            <div class="form-group" style="margin-top :20px; padding:auto;">
                                 {{ form.location.label(class="form-control-label") }}
                                 {% if form.location.errors %}
                                     {{ form.location(class="form-control form-control-lg is-invalid") }}
@@ -78,10 +78,13 @@
                                 {% endif %}
                             </div>
                         </fieldset>
-                        <div class="form-group">
-                            {{ form.submit(class="btn btn-outline-info") }}
+                        <div class="form-group" style="margin-top :20px; padding:auto; margin-left: 47%; ">
+                            <div class="submit-btn">
+                             {{ form.submit(class="btn btn-outline-info") }}
+                            </div>
                         </div>
                     </form>
+                    
                 </div>
                 {% if price %}
                 <div class="pred-price">
