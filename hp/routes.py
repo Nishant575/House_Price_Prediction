@@ -1,4 +1,4 @@
-from crypt import methods
+
 import os
 from hp import app, util
 from hp.forms import InfoForm
