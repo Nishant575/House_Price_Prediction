@@ -9,8 +9,38 @@ html{
       padding: 0px;
       background : rgba(0,0,0,0.7) url(resources/background-img.jpg);
       background-size : cover;
-      background-blend-mode: darken;
+      
       min-height: 100%;
       display: grid;
       color: rgb(229, 240, 255);
   }
+
+
+ .container{
+     margin: auto;
+     margin-top: 8%;
+ }
+
+ .submit-btn{
+
+    margin-left: 30%;
+ }
+
+ .form-control-label{
+
+    margin-bottom: 20px;
+ }
+
+ .pred-price{
+
+    text-align: center;
+ }
+
+ #a1{
+    text-align: center;
+ }
+
+ h3{
+
+    text-align: center;
+ }
