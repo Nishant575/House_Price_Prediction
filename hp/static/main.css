@@ -15,15 +15,15 @@ html{
       color: rgb(229, 240, 255);
   }
 
-
- .container{
-     margin: auto;
-     margin-top: 8%;
- }
+.container {
+   margin: auto;
+   margin-top: 3%;
+}
 
  .submit-btn{
 
     margin-left: 30%;
+    font-size: 25px;
  }
 
  .form-control-label{
