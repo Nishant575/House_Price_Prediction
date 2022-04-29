@@ -6,7 +6,7 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo, ValidationE
 from hp import util
 
 class InfoForm(FlaskForm):
-    area = IntegerField('Area',
+    area = IntegerField('Area (in Sqft.)',
                         validators=[DataRequired()])
     bhk = SelectField('BHK', choices=[1,2,3,4,5], coerce=int)
     bath = SelectField('Bath', choices=[1,2,3,4,5], coerce=int)
