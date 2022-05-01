@@ -12,3 +12,7 @@ class InfoForm(FlaskForm):
     bath = SelectField('Bath', choices=[1,2,3,4,5], coerce=int)
     location = SelectField('Location', choices=util.get_location_names())
     submit = SubmitField('Predict')
+
+class buyform(FlaskForm):
+    loc = SelectField('Location', choices=util.get_location_names())
+    submit = SubmitField('Price Trend')

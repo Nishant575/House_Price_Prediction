@@ -31,6 +31,9 @@ html{
  .pred-price{
 
     text-align: center;
+    font-weight: 400;
+    background: rgba(29, 45, 68, 0.6);
+
  }
 
  #a1{
@@ -276,3 +279,31 @@ u{
 
    margin-top: 150px;
 }
+
+.submit-btn2{
+   
+  position: relative;
+  box-sizing: border-box;
+  display: inline-block;
+  margin-left: 0%;
+  overflow: hidden;
+  padding: 10px 20px;
+  text-decoration: none;
+  width:200px;
+  border-color: rgb(61, 235, 238);
+  z-index: 0;  
+  color:aliceblue;
+  font-size: 25px;
+  font-weight: 220;
+  transition: 800ms;
+}
+.submit-btn2 i {
+  padding-right: 8px;
+} 
+.submit-btn2:hover{
+
+  font-weight: 300;
+  border-color: rgb(35, 160, 162);
+  background-image: linear-gradient(to right, #085078 0%, #7ccdc4  100%);
+}
+

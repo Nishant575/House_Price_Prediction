@@ -21,6 +21,29 @@ def get_estimated_price(location,sqft,bhk,bath):
 
     return round(__model.predict([x])[0],2)
 
+def buy_price(location):
+    sqft = [600,800,1200,1800]
+    bhk = [1,2,3,4]
+    bath = [1,2,3,4]
+    try:
+        loc_index = __data_columns.index(location.lower())
+    except:
+        loc_index = -1
+    graph_dict = {}    
+    for i in range(0,4):
+        x = np.zeros(len(__data_columns))
+        x[0] = sqft[i]
+        x[1] = bath[i]
+        x[2] = bhk[i]
+        if loc_index>=0:
+            x[loc_index] = 1
+
+        price = abs(round(__model.predict([x])[0],2))
+        graph_dict[sqft[i]] = price
+    json_object = json.dumps(graph_dict, indent = 4)
+    with open("/Users/apple/Nishant/Projects/SEMVI_Proj/House_Price_Prediction/hp/model/graph.json", "w") as outfile:
+        outfile.write(json_object)
+
 def get_location_names():
     return __locations
 
