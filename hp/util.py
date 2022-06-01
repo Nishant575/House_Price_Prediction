@@ -41,7 +41,7 @@ def buy_price(location):
         price = abs(round(__model.predict([x])[0],2))
         graph_dict[sqft[i]] = price
     json_object = json.dumps(graph_dict, indent = 4)
-    with open("/Users/apple/Nishant/Projects/SEMVI_Proj/House_Price_Prediction/hp/model/graph.json", "w") as outfile:
+    with open("F:\\Nishant\\SemVIProj\\House_Price_Prediction\\hp\\model\\graph.json", "w") as outfile:
         outfile.write(json_object)
 
 def get_location_names():
@@ -51,8 +51,7 @@ def load_saved_artifacts():
     global  __data_columns
     global __locations
 
-
-    with open('/Users/apple/Nishant/Projects/SEMVI_Proj/House_Price_Prediction/hp/model/columns.json', "r") as f:
+    with open('F:\\Nishant\\SemVIProj\\House_Price_Prediction\\hp\\model\\columns.json', "r") as f:
 
 
         __data_columns = json.load(f)['data_columns']
@@ -61,7 +60,7 @@ def load_saved_artifacts():
     global __model
     if __model is None:
 
-        with open('/Users/apple/Nishant/Projects/SEMVI_Proj/House_Price_Prediction/hp/model/hp_model.pickle', 'rb') as f:
+        with open('F:\\Nishant\\SemVIProj\\House_Price_Prediction\\hp\\model\\hp_model.pickle', 'rb') as f:
 
             __model = pickle.load(f)
 
